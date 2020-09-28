@@ -70,3 +70,29 @@ The final developer tools view that we'll look at before moving on is the Networ
 
 **Operators**
 ![Addition](images/C14377_03_01.png)
+![Addition](images/C14377_03_02.png)
+![Addition](images/C14377_03_03.png)
+
+**Not all operators are symbols.**
+A very helpful operator is typeof. It shows the data type as a string. The operator is all lowercase letters. Use the group operator to get the type of an expression using other operators.
+
+For example, the typeof operator controls the precedence of expression evaluation:
+
+```
+typeof 100
+TypeOf 100
+typeof "100"
+typeof true
+typeof (1 > 2)
+typeof (2 + " dozen eggs")
+```
+The output for each of the preceding examples would be as follows:
+
+```
+number
+Uncaught SyntaxError: …
+string
+boolean
+boolean
+string
+```
