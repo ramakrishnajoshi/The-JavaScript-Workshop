@@ -36,8 +36,10 @@ So far in our journey, we've only been exposed to the modern web browser as a Ja
 
 **1. Browser-Based JavaScript**
 By far, the most common environment for using JavaScript throughout its entire history as a language is within the web browser.
+
 **2. Server-Based JavaScript**
-With the improvement in the performance of JavaScript engines in the web browser, people began wondering whether there may be other applications for the language and specific runtimes—particularly in terms of a server-based environment. In 2009, this became a reality with the creation of Node.js. A year before this, Google had open-sourced its powerful V8 JavaScript engine. This allowed developers to implement V8, along with specific operating system bindings, to produce the first version of Node.js:
+With the improvement in the performance of JavaScript engines in the web browser, people began wondering whether there may be other applications for the language and specific runtimes—particularly in terms of a server-based environment. In 2009, this became a reality with the creation of Node.js. A year before this, Google had open-sourced its powerful V8 JavaScript engine. This allowed developers to implement V8, along with specific operating system bindings, to produce the first version of Node.js
+
 **3. Desktop JavaScript**
 While not exactly a new environment for JavaScript to run with, desktop applications are a segment that ripe for growth as additional runtimes and libraries mature. The most popular solution for building desktop applications is Electron. Like similar frameworks, when developing applications for Electron, you will be using native web technologies that end up being wrapped in a native-focused container for any target desktop operating system.
 
@@ -70,6 +72,14 @@ The final developer tools view that we'll look at before moving on is the Networ
 
 **Operators**
 ![Addition](images/C14377_03_01.png)
+
+
+When we compare a number with a string with the same numeric value using the == operator, data type conversion takes place. This is shown in the following snippet:
+```
+> 100 == "100"
+\\Output. Data type conversion takes place
+< true
+```
 ![Addition](images/C14377_03_02.png)
 ![Addition](images/C14377_03_03.png)
 
@@ -96,3 +106,36 @@ boolean
 boolean
 string
 ```
+
+Example:
+```
+> 100 - 10 + " Main Street"
+\\Output. 
+< "90 Main Street" 
+When string is in expression JavaScript attempts to convert all other elements to a string.
+```
+
+
+**Variables:**
+
+For variables, there are two declaration keywords: var and let. For constants, the declaration keyword is const.
+
+```
+var errorMessage
+var isSold
+```
+Variables that are not assigned a value still have a data type. That data type is named **undefined**. The typeof operator detects undefined data types.
+
+![TypeOf](images/typeof_and_dynamic_data_type_conversion.png)
+
+**Framework versus Library**
+
+Library describes an external collection of functions that perform a given task. These functions are made accessible to us as users of the library via APIs. One useful library is lodash, which can, for example, remove all duplicated values from an array:
+```
+const duplicatedArray = [1,2,1,2,3];
+const uniqueArray = lodash.uniq(duplicatedArray)
+// => [1,2,3]
+```
+Frameworks, on the other hand, are a particular form of library. They are reusable code frames that build the foundation of a JavaScript application. In contrast to libraries, which extend your code with functionality,
+
+We have just looked at lodash.js, a library that helps developers handle data structures; (to be used, for example, making arrays unique) and Vue.js, a framework for building modular and dynamic user interfaces. 
