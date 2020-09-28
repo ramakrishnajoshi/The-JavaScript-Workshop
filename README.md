@@ -129,7 +129,7 @@ Variables that are not assigned a value still have a data type. That data type i
 
 ![TypeOf](images/typeof_and_dynamic_data_type_conversion.png)
 
-**Framework versus Library**
+### Framework versus Library
 
 Library describes an external collection of functions that perform a given task. These functions are made accessible to us as users of the library via APIs. One useful library is lodash, which can, for example, remove all duplicated values from an array:
 ```
@@ -139,4 +139,56 @@ const uniqueArray = lodash.uniq(duplicatedArray)
 ```
 Frameworks, on the other hand, are a particular form of library. They are reusable code frames that build the foundation of a JavaScript application. In contrast to libraries, which extend your code with functionality,
 
-We have just looked at lodash.js, a library that helps developers handle data structures; (to be used, for example, making arrays unique) and Vue.js, a framework for building modular and dynamic user interfaces. 
+Despite the technical differences between libraries and frameworks, we are going to use those terms interchangeably. Another synonym you'll encounter in the JavaScript world to describe external source code is "package." 
+
+*We have just looked at lodash.js, a library that helps developers handle data structures; (to be used, for example, making arrays unique) and Vue.js, a framework for building modular and dynamic user interfaces. These are just two examples of quite popular and widely used JS frameworks/libraries. In addition to those, there is a vast and ever-growing number of external packages you can choose from. Each one of them is useful for solving one specialized set of problems.*
+
+**A few modern and often used alternatives that support creating browser applications are, for instance, React.js, Vue.js, and Angular.js. Other libraries that help you store and manage data in your app are MobX, VueX, and Redux.**
+
+Again, others can transform source code so that it **supports older browser engines, for example, Babel, or handle and manipulate time for you, such as moment.js.**
+
+Then, there are frameworks such as **Express.js or Hapi that let you create simple, easy‑to-maintain, and performant REST APIs for Node.js.**
+
+Some packages make building command-line interfaces (CLIs) or desktop applications easy.
+
+Most build and productivity tools for the JavaScript ecosystem are provided to the community as a library, too. Webpack, Parcel, and Gulp are a few of these tools.
+
+Not all of the available libraries are equally popular or useful. Their popularity depends on a few key facts:
+
+*Whether they fix a problem that bothers many developers
+*How well their API is defined and structured
+*The quality of their documentation
+*The level of performance optimization
+
+### Everlasting jQuery
+One evergreen library that has been around for over a decade is jQuery. It touches almost every web app in one way or another and belongs in the toolkit of everybody who builds browser applications.
+
+jQuery provides, but is not limited to providing, the following features:
+*DOM manipulations
+*Event handling
+*Animated effects and transitions
+
+## Where to Find and How to Use External Code
+There are a few different approaches when it comes to including libraries in your program. Depending on those approaches, we get packages from different places.
+
+One is to copy the library's source code and to handle it as we wish. This approach is the most secure in the sense that we have all the control of the software and can customize it to fit our needs. However, by doing so, we give up compatibility and automated updates and patches. Most open-source projects host their code on GitHub or any other version control platform. Therefore, it's rather easy to access and fork the package's code. As soon as we download the source code, we can do whatever we want to get it working with our software. Possible solutions could be hosting it on our **cloud distribution network (CDN)** and accessing it from there or bundling it with our source code.
+
+Another approach is downloading the package from a CDN from the client at runtime. The most popular CDN to exclusively host JavaScript libraries is available here. It hosts thousands of libraries you can include in your markup without you having to worry about where to store it or how to upgrade it.
+
+**Looks like cdn is similar to mavenCentral ot jetpack() that is used in gradle file.**
+
+The following is an example of how you'd include Vue.js with your markup:
+
+```
+// myApplicationMarkup.html
+<html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+console.log("Vue was loaded: ", !!Vue)
+// => Vue was loaded: true
+</script>
+</html>
+```
+```
+Note: If you include packages by loading them from the browser during runtime, you have to be aware of the order of the script tags. They're loaded from top to bottom. Therefore, if you switched the two script tags in the preceding example, console.log would print that there is no Vue.js loaded, even though, eventually, it will be.
+```
