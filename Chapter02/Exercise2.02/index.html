@@ -3,9 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>JavaScript Project</title>
+    <!-- In order to bind the newly created JavaScript file to our HTML so that it can run in the web browser, 
+      we must reference it within the HTML file itself. Place the following code directly
+       following the <title> tag and before the 
+        closing tag of the <head> element: -->
     <script src="app.js"></script>
   </head>
   <body>
     <h1>Just an HTML page...</h1>
+    <p>We now know that our project boilerplate has been configured correctly since the HTML is 
+      running and has effectively called code from within the JavaScript file. We now have the 
+      beginnings of a web application—complete with structure (HTML) and logic (JavaScript) 
+      components.</p>
   </body>
 </html>
+
+<!-- JavaScript Execution Order
+This section hearkens back to an example from the previous chapter in terms of the various ways JavaScript
+ can be included within a web document. There are two choices here: either include an external JavaScript
+  file somewhere within the <head> tag or the <body> tag of your HTML document or embed the code directly 
+    within the document itself, again at either location.
+
+No matter how you include JavaScript within your HTML document, the web browser will always execute from 
+top to bottom. Any JavaScript within the <head> tag of a document will execute before anything within 
+  the <body> tag of the document. Of course, you can compartmentalize blocks of JavaScript code within 
+    functions to execute when invoked as well, which effectively gets around this rule in some ways. -->
+
+  <!-- Pbserve that alert that is there in JS file is displayed first and after that html <body> content is displayed -->
