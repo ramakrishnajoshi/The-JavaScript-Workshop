@@ -155,18 +155,18 @@ Most build and productivity tools for the JavaScript ecosystem are provided to t
 
 Not all of the available libraries are equally popular or useful. Their popularity depends on a few key facts:
 
-*Whether they fix a problem that bothers many developers
-*How well their API is defined and structured
-*The quality of their documentation
-*The level of performance optimization
+* Whether they fix a problem that bothers many developers
+* How well their API is defined and structured
+* The quality of their documentation
+* The level of performance optimization
 
 ### Everlasting jQuery
 One evergreen library that has been around for over a decade is jQuery. It touches almost every web app in one way or another and belongs in the toolkit of everybody who builds browser applications.
 
 jQuery provides, but is not limited to providing, the following features:
-*DOM manipulations
-*Event handling
-*Animated effects and transitions
+* DOM manipulations
+* Event handling
+* Animated effects and transitions
 
 ## Where to Find and How to Use External Code
 There are a few different approaches when it comes to including libraries in your program. Depending on those approaches, we get packages from different places.
